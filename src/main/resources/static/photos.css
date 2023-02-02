@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,300;1,100&display=swap');
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 0%;
+    font-size: 5rem;
+    color: #fafafa;
+    justify-content: center;
+    padding: 0px;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    text-shadow: 1px 1px 1px #919191,
+    1px 2px 1px #919191,
+    1px 3px 1px #919191,
+    1px 4px 1px #919191,
+    1px 5px 1px #919191,
+    1px 6px 1px #919191,
+    1px 7px 1px #919191,
+    1px 8px 1px #919191,
+    1px 9px 1px #919191,
+    1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.container {
+    position: absolute;
+    max-width: 800px;
+    margin-top: 15%;
+    margin-left: 25%;
+    padding: 50px;
+}
+
+.slider img{
+    max-width: 100%;
+    display: none;
+    width: 4000px;
+
+}
+
+img.active {
+    display: block;
+    animation: fade 0.8s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container-bouton {
+    width: 100%;
+    height: auto;
+    border: 1px solid #000;
+    box-shadow: 0 10px 10px #0c0404;
+    display: flex;
+    justify-content: center;
+}
+.bouton {
+    font-size: 50px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        margin-left: 20%;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        margin-left: 10%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}

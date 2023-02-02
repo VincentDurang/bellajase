@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="Accueil">accueil</title>
+    <link rel="stylesheet" href="accueil.css">
+    <div th:replace="fragments/header-nav :: header-css"/>
+</head>
+<body>
+<div th:replace="fragments/header-nav :: header"/>
+    <div class="bienvenue">
+      <h1>Bienvenue</h1>
+    </div>
+    <div class="presentation">
+      <p>Avec CPlusClean vous retrouvez la fraîcheur de tous vos tissus d'ameublement, en partant du simple tapis au matelas de votre animal préféré, avec CPlusClean vous faites un geste pour la planète.
+          CPlusClean vous invite à visiter la photothèque pour plus d’informations et de cliquer le bouton pour toutes demandes.
+      </p>
+        <img id="bellajases" src="logo.png">
+    </div>
+    <div class="description-aspi">
+        <p>Les supports sont dans un premier temps dépoussierés, aspirer puis brossé avec une brosse adequate ainsi qu'un produit
+        détachant non toxique et respectueux de la nature ensuite il est humidifié pour extraire toutes mauvaises odeurs, allergénes,
+        poussiéres et bactéries enfin le tissu pourra à nouveau respirer</p>
+        <img src="aspi.jpg">
+    </div>
+
+
+
+</body>
+</html>

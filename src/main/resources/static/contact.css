@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lobster&family=Pacifico&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,300;1,100&display=swap');
+
+h1 {
+    margin:0px;
+    font-size: 7rem;
+    display: flex;
+    width: 100%;
+    color: #fafafa;
+    justify-content: center;
+    padding: 8%;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    text-shadow: 1px 1px 1px #919191,
+    1px 2px 1px #919191,
+    1px 3px 1px #919191,
+    1px 4px 1px #919191,
+    1px 5px 1px #919191,
+    1px 6px 1px #919191,
+    1px 7px 1px #919191,
+    1px 8px 1px #919191,
+    1px 9px 1px #919191,
+    1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+h2 {
+    position: absolute;
+    margin:0px;
+    font-size: 7rem;
+    display: flex;
+    width: 100%;
+    color: #fafafa;
+    justify-content: center;
+    padding: 8%;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+}
+
+.icon {
+    position: absolute;
+    margin-top: 0%;
+    margin-left: 60%;
+    font-size: 25rem;
+    width: 10%;
+    color: #fafafa;
+    padding: 0;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+}
+
+
+.contact {
+    position: absolute;
+    display: flex;
+    height: 500px;
+    width: 450px;
+    padding: 30px;
+    margin-top: 0%;
+    margin-left: 10%;
+    background-image: repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03)
+    2px,transparent 2px, transparent 4px),linear-gradient(45deg, rgb(18, 105, 233),rgb(155,205,255));
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 20px;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 300px;
+}
+
+.nom {
+    color: #fafafa;
+    display: flex;
+    height: 80px;
+    align-items: flex-start;
+    font-size: 30px;
+}
+
+.prenom {
+    color: #fafafa;
+    display: flex;
+    height: 80px;
+    align-items: flex-start;
+    font-size: 30px;
+}
+.email {
+    color: #fafafa;
+    display: flex;
+    height: 80px;
+    align-items: flex-start;
+    font-size: 30px;
+}
+
+#email {
+    font-size: 20px;
+    margin-left: 27px;
+}
+#nom {
+    font-size: 20px;
+    margin-left: 33px;
+}
+#prenom {
+    font-size: 20px;
+}
+
+.phone {
+    color: #fafafa;
+    display: flex;
+    height: 80px;
+    align-items: flex-start;
+    font-size: 27px;
+
+
+}
+
+#phone {
+    font-size: 20px;
+
+}
+
+.message {
+    display: flex;
+    color: #fafafa;
+    height: 80px;
+    font-size: 30px;
+    justify-content: flex-start;
+}
+
+#message {
+    font-size: 20px;
+    height: 100px;
+    padding-left: 10px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 20px;
+    height: 30px;
+    width: 100px;
+}
+
+@media (max-width: 1300px) {
+ .icon {
+     margin-left: 60%;
+     font-size: 20rem;
+ }
+ .contact {
+     height: 450px;
+     width: 400px;
+ }
+}
+
+@media (max-width: 900px) {
+    .icon {
+        margin-left: 30%;
+        font-size: 15rem;
+        margin-top: 550px;
+    }
+    .contact {
+        height: 450px;
+        width: 400px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+}

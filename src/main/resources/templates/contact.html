@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="Contact">contact</title>
+    <div th:replace="fragments/header-nav :: header-css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+<div th:replace="fragments/header-nav :: header"/>
+<h1>Contact</h1>
+<h2>ou</h2>
+
+<div class="icon"></div>
+<a href="https://m.facebook.com/profile.php?id=100089580320266" class="icon" aria-label="visit home page"
+   aria-current="page">
+    <i class="fa-brands fa-facebook"></i>
+</a>
+</div>
+
+<div class="contact">
+    <form onsubmit="sendEmail(); reset(); return false;">
+        <div class="nom">
+            <label for="nom">Nom :</label>
+            <input type="text" name="nom" id="nom" placeholder="Entrer ici votre nom">
+        </div>
+        <div class="prenom">
+            <label for="prenom">Prenom :</label>
+            <input type="text" name="prenom" id="prenom" placeholder="Entrer ici votre prenom">
+        </div>
+        <div class="email">
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" placeholder="Entrer ici votre email">
+        </div>
+        <div class="phone">
+            <label for="phone">Telephone :</label>
+            <input type="text" name="phone" id="phone" placeholder="Entrer ici votre telephone">
+        </div>
+        <div class="message">
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" placeholder="Entrer ici votre message"></textarea>
+        </div>
+        <button type="submit" class="btn">Valider</button>
+    </form>
+</div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail() {
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "durangvincent0@gmail.com",
+            Password: "76E213E85F41388ABBF802165B8ADB334BC3",
+            To: 'durangvincent0@gmail.com',
+            From: document.getElementById("email").value,
+            Subject: "This is the subject",
+            Body: "Nom : " + document.getElementById("nom").value
+                + "<br> Prenom : " + document.getElementById("prenom").value
+                + "<br> Email : " + document.getElementById("email").value
+                + "<br> Numero : " + document.getElementById("phone").value
+                + "<br> Message : " + document.getElementById("message").value
+        }).then(
+            message => alert("Message envoyer")
+        );
+    }
+</script>
+
+</body>
+</html>

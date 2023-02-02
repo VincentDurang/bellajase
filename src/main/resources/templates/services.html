@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="Services">Service</title>
+    <div th:replace="fragments/header-nav :: header-css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="service.css">
+</head>
+<body>
+<div th:replace="fragments/header-nav :: header"/>
+
+<h1>Tarifs</h1>
+<div class="container">
+    <div class="card-container">
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="card-front">
+                    <p>
+                        Les tapis :<br><br>
+                        Les petits tapis (80x110/80x150 cm) 35 € <br>
+                        Tapis de taille moyenne (120x170 / 140x200 cm) 55€ <br>
+                        Grand tapis (160x230/ 200x290 cm) 65€ <br><br>
+                        Les plus grands tapis au-dessus de 200x290 cm demande sur devis.
+                    </p>
+                    <div class="card-price">
+                        <span></span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="card-back">
+                    <a href="http://localhost:8080/contact" class="btn">Je prends contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="card-front">
+                    <p>
+                        Canapé / Fauteuil :<br><br>
+                        Fauteuil (1 place) 30€ <br>
+                        Canapé ou convertible (2 places) 50 € <br>
+                        Canapé ou convertible (3 places) 70 € <br>
+                        Canapé (5 places) 80€ <br><br>
+                        Devis sur demande plus de 2 canapes
+                    </p>
+                    <div class="card-price">
+                        <span></span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="card-back">
+                    <a href="http://localhost:8080/contact" class="btn">Je prends contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="card-front">
+                    <p>
+                        Matelas :<br><br>
+                        Matelas (60x120 / 70x140 cm) 30€ <br>
+                        Matelas (140x200 cm) 50€ <br>
+                        Matelas (160x200 cm) 60€ <br><br>
+                        Devis sur demande plus de 2 matelas
+                    </p>
+                    <div class="card-price">
+                        <span></span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="card-back">
+                    <a href="http://localhost:8080/contact" class="btn">Je prends contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="card-front">
+                    <p>
+                        Véhicule (nettoyage intérieur) : <br>
+                        Citadine 40€ <br>
+                        Berline 50€ <br>
+                        Type break 60€ <br><br>
+                        Pour Limousine/ mini bus / bus sur devis
+                    </p>
+                    <div class="card-price">
+                        <span></span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="card-back">
+                    <a href="http://localhost:8080/contact" class="btn">Je prends contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

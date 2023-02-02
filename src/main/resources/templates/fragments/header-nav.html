@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <th:block th:fragment="header-css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="style-nav.css">
+  </th:block>
+</head>
+
+<body>
+<div th:fragment="header">
+  <nav>
+    <a href="#" class="nav-icon" aria-label="visit home page" aria-current="page">
+      <img src="icons-menage-white.png" alt="menage icon">
+      <span>CPlusClean</span>
+    </a>
+    <div class="main-nav-links">
+      <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links-container">
+        <a href="http://localhost:8080" aria-label="page">Accueil</a>
+        <a href="http://localhost:8080/photo">Photos</a>
+        <a href="http://localhost:8080/service">Tarifs</a>
+        <a href="http://localhost:8080/contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <script src="nav-hamburger.js"></script>
+</div>
+</body>
+</html>

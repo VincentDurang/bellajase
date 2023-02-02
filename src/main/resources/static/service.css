@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,300;1,100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    position: absolute;
+    display: flex;
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 25%;
+    font-size: 5rem;
+    color: #fafafa;
+    justify-content: center;
+    padding: 0px;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    text-shadow: 1px 1px 1px #919191,
+    1px 2px 1px #919191,
+    1px 3px 1px #919191,
+    1px 4px 1px #919191,
+    1px 5px 1px #919191,
+    1px 6px 1px #919191,
+    1px 7px 1px #919191,
+    1px 8px 1px #919191,
+    1px 9px 1px #919191,
+    1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+
+.container {
+    position: absolute;
+    width: 90%;
+    max-width: 1400px;
+    margin: 10%;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 30px;
+    margin: 80px 0;
+}
+.card-wrapper {
+    position: relative;
+    min-height: 350px;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+
+.card-wrapper:hover .card {
+    transform: rotateY(180deg);
+
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    transform-style:preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.86,0,0.07,1);
+    color: #fdfdfe;
+    font-weight: bold;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    backface-visibility: hidden ;
+    -webkit-backface-visibility: hidden;
+}
+
+.card-front {
+    background: #1847ee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-wrapper:nth-child(even) .card-front {
+    background-color: #207ef7;
+}
+
+.card-front p {
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.fa-solid {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+.card-price span {
+    font-size: 45px;
+}
+
+.card-back {
+    background: #1847ee;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-wrapper:nth-child(even) .card-back {
+    background-color: #1e7cf5;
+}
+
+.card-back a {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px ;
+    font-weight: normal;
+    background-color: #fff;
+    font-size: 14px;
+    transition: background-color 0.3s ease-out,
+    color 0.3s ease-out;
+}
+
+.card-wrapper:nth-child(odd) .card-back a:hover {
+    background-color: #a2c9f6;
+    color: #110e0e;
+}
+
+.card-wrapper:nth-child(even) .card-back a:hover {
+    background-color: #7ec9ec;
+    color: #dfe0e3;
+}
+
+@media (max-width: 900px) {
+    .container {
+        margin: 15%;
+    }
+
+    h1 {
+        margin-top: 5%;
+    }
+}
+
