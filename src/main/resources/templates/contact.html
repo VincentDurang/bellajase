@@ -22,32 +22,50 @@
 </div>
 
 <div class="contact">
-    <form onsubmit="sendEmail(); reset(); return false;">
+    <form action="#" th:action="@{/contact}"
+          th:object="${contactDTO}"
+          method="post">
+          <!-- onsubmit="sendEmail(); reset(); return false;-->
         <div class="nom">
             <label for="nom">Nom :</label>
-            <input type="text" name="nom" id="nom" placeholder="Entrer ici votre nom">
+            <input type="text" th:field="*{name}" name="nom" id="nom" placeholder="Entrer ici votre nom">
+            <div th:if="${#fields.hasErrors('name')}" class="error-input" th:errors="*{name}">name
+                Error
+            </div>
         </div>
         <div class="prenom">
             <label for="prenom">Prenom :</label>
-            <input type="text" name="prenom" id="prenom" placeholder="Entrer ici votre prenom">
+            <input type="text" th:field="*{surname}" name="prenom" id="prenom" placeholder="Entrer ici votre prenom">
+            <div th:if="${#fields.hasErrors('surname')}" class="error-input" th:errors="*{surname}">surname
+                Error
+            </div>
         </div>
         <div class="email">
             <label for="email">Email :</label>
-            <input type="email" name="email" id="email" placeholder="Entrer ici votre email">
+            <input type="email" th:field="*{email}" name="email" id="email" placeholder="Entrer ici votre email">
+            <div th:if="${#fields.hasErrors('email')}" class="error-input" th:errors="*{email}">email
+                Error
+            </div>
         </div>
         <div class="phone">
             <label for="phone">Telephone :</label>
-            <input type="text" name="phone" id="phone" placeholder="Entrer ici votre telephone">
+            <input type="text" th:field="*{num}" name="phone" id="phone" placeholder="Entrer ici votre telephone">
+            <div th:if="${#fields.hasErrors('num')}" class="error-input" th:errors="*{num}">num
+                Error
+            </div>
         </div>
         <div class="message">
             <label for="message">Message :</label>
-            <textarea id="message" rows="4" placeholder="Entrer ici votre message"></textarea>
+            <textarea th:field="*{message}" id="message" rows="4" placeholder="Entrer ici votre message"></textarea>
+            <div th:if="${#fields.hasErrors('message')}" class="error-input" th:errors="*{message}">message
+                Error
+            </div>
         </div>
         <button type="submit" class="btn">Valider</button>
     </form>
 </div>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
+<!--<script src="https://smtpjs.com/v3/smtp.js"></script>
+ <script>
     function sendEmail() {
         Email.send({
             Host: "smtp.elasticemail.com",
@@ -65,7 +83,7 @@
             message => alert("Message envoyer")
         );
     }
-</script>
+</script>-->
 
 </body>
 </html>
